@@ -1,0 +1,148 @@
+/* Global Styles */
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: #131720;
+    font-family: sans-serif;
+}
+
+h3 {
+    color: azure;
+    font-size: 1.1rem;
+    margin: 10px 0;
+    height: 60px; /* Fixed height for uniformity */
+    overflow: hidden;
+    display: flex;
+    align-items: center; /* Center text vertically */
+    justify-content: center; /* Center text horizontally */
+    text-align: center;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit title to 2 lines */
+    -webkit-box-orient: vertical;
+}
+
+/* Navbar */
+.topnav {
+    overflow: hidden;
+    background-color: #131720;
+    padding: 10px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.topnav a {
+    color: aliceblue;
+    text-decoration: none;
+    font-size: 1.2rem;
+    text-transform: uppercase;
+    padding: 14px 16px;
+}
+
+.topnav .search-container {
+    display: flex;
+}
+
+/* Search Form */
+form {
+    background-color: #151f30;
+    width: 300px;
+    height: 43px;
+    border-radius: 11px;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+}
+
+input {
+    all: unset;
+    font: 15px system-ui;
+    color: #fff;
+    height: 100%;
+    width: 100%;
+    padding: 6px 9px;
+}
+
+::placeholder {
+    text-align: center;
+}
+
+/* Main Container for Cards */
+#section {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+    gap: 20px;
+    padding: 20px;
+    align-items: stretch; /* Ensures all cards have the same height */
+}
+
+/* Movie Cards */
+.card {
+    background-color: #151f30;
+    border-radius: 19px;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 5px 5px 5px rgb(0, 0, 0);
+    transition: transform 0.3s ease-in-out;
+    flex: 1 1 calc(20% - 20px); /* 5 cards per row */
+    max-width: 250px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Ensures even spacing inside cards */
+    margin:25px 0px;
+    align-items: center; /* Horizontally center */
+    justify-content: center; /* Vertically center */
+    text-align: center;
+}
+
+.card:hover {
+    transform: scale(1.1);
+}
+
+/* Movie Image */
+.thumbnail {
+    height: 350px;
+    width: 100%;
+    border-radius: 19px;
+}
+
+/* Movie Title */
+#title {
+    height: 44px;
+    color: #fff;
+}
+
+/* Description */
+.description {
+    font-size: 0.9rem;
+    color: #ddd;
+    margin-top: 10px;
+    height: 40px; /* Fixed height for uniformity */
+    overflow: hidden;
+    text-overflow: ellipsis;
+    display: -webkit-box;
+    -webkit-line-clamp: 2; /* Limit to 2 lines */
+    -webkit-box-orient: vertical;
+}
+
+/* Responsive Grid Layout */
+
+/* Tablets: 3 cards per row */
+@media (max-width: 1024px) {
+    .card {
+        flex: 1 1 calc(33.33% - 20px);
+    }
+}
+
+/* Mobile: 1 card per row */
+@media (max-width: 600px) {
+    .card {
+        flex: 1 1 100%;
+    }
+}
